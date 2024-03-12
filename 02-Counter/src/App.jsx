@@ -18,8 +18,8 @@ function App() {
 			{/* Button to increment value by 2 but should not exceed 20 */}
 			<button
 				onClick={() => {
-					setCounter((counter = counter >= 20 ? 20 : counter + 1));
-					setCounter((counter = counter >= 20 ? 20 : counter + 1));
+					setCounter((counter) => (counter >= 20 ? 20 : counter + 1));
+					setCounter((counter) => (counter >= 20 ? 20 : counter + 1));
 				}}
 			>
 				Add Value +2
@@ -27,7 +27,7 @@ function App() {
 			{/* Button to decrement value but should not drop below Zero */}
 			<button
 				onClick={() => {
-					setCounter(counter <= 0 ? 0 : (counter) => counter - 1);
+					setCounter((counter) => (counter <= 0 ? 0 : counter - 1));
 				}}
 			>
 				Deduct Value -1
